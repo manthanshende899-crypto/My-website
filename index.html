@@ -1,4 +1,95 @@
-<!DOCTYPE html><!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html><!DOCTYPE html>
+<html>
+<head>
+  <title>My Links Website</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f2f2f2;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+    h2 {
+      background: #333;
+      color: white;
+      padding: 8px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background: white;
+      margin: 5px 0;
+      padding: 10px;
+    }
+    a {
+      text-decoration: none;
+      color: blue;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Manthan Shende – All Links</h1>
+
+<input type="text" id="search" placeholder="Search link..." onkeyup="searchLinks()">
+
+<h2>📱 APP LINKS</h2>
+<ul id="links">
+  <li><a href="#">LIC App</a></li>
+  <li><a href="#">Paytm App</a></li>
+  <li><a href="#">PhonePe App</a></li>
+  <li><a href="#">Google Pay App</a></li>
+  <li><a href="#">Instagram App</a></li>
+  <li><a href="#">Facebook App</a></li>
+  <li><a href="#">WhatsApp App</a></li>
+  <li><a href="#">Telegram App</a></li>
+  <li><a href="#">YouTube App</a></li>
+  <li><a href="#">Amazon App</a></li>
+</ul>
+
+<h2>🌐 WEBSITE LINKS</h2>
+<ul id="links2">
+  <li><a href="https://licindia.in" target="_blank">LIC Website</a></li>
+  <li><a href="https://www.google.com" target="_blank">Google</a></li>
+  <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
+  <li><a href="https://www.amazon.in" target="_blank">Amazon</a></li>
+  <li><a href="https://www.flipkart.com" target="_blank">Flipkart</a></li>
+  <li><a href="https://www.irctc.co.in" target="_blank">IRCTC</a></li>
+  <li><a href="https://www.sbi.co.in" target="_blank">SBI</a></li>
+  <li><a href="https://www.onlinesbi.com" target="_blank">SBI NetBanking</a></li>
+  <li><a href="https://www.uidai.gov.in" target="_blank">Aadhaar</a></li>
+  <li><a href="https://www.india.gov.in" target="_blank">India Gov</a></li>
+</ul>
+
+<script>
+function searchLinks() {
+  let input = document.getElementById("search").value.toLowerCase();
+  let lists = document.querySelectorAll("li");
+
+  lists.forEach(function(li) {
+    if (li.innerText.toLowerCase().includes(input)) {
+      li.style.display = "";
+    } else {
+      li.style.display = "none";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
 <html>
 <head>
   <title>My Useful Links</title>
