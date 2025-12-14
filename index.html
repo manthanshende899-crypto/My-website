@@ -1,4 +1,78 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html>
+<html>
+<head>
+  <title>My Useful Links</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f2f2f2;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 15px 0;
+      font-size: 16px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background: white;
+      margin: 6px 0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    a {
+      text-decoration: none;
+      color: blue;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>🔗 My Important Links</h1>
+
+<input type="text" id="search" placeholder="Search link..." onkeyup="searchLinks()">
+
+<ul id="linkList">
+  <li><a href="https://licindia.in" target="_blank">LIC India</a></li>
+  <li><a href="https://www.irctc.co.in" target="_blank">IRCTC</a></li>
+  <li><a href="https://www.uidai.gov.in" target="_blank">Aadhaar</a></li>
+  <li><a href="https://www.incometax.gov.in" target="_blank">Income Tax</a></li>
+  <li><a href="https://www.onlinesbi.com" target="_blank">SBI Bank</a></li>
+  <li><a href="https://www.hdfcbank.com" target="_blank">HDFC Bank</a></li>
+  <li><a href="https://www.icicibank.com" target="_blank">ICICI Bank</a></li>
+  <li><a href="https://paytm.com" target="_blank">Paytm</a></li>
+  <li><a href="https://phonepe.com" target="_blank">PhonePe</a></li>
+  <li><a href="https://www.amazon.in" target="_blank">Amazon</a></li>
+  <li><a href="https://www.flipkart.com" target="_blank">Flipkart</a></li>
+  <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
+  <li><a href="https://www.google.com" target="_blank">Google</a></li>
+  <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+  <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+</ul>
+
+<script>
+function searchLinks() {
+  let input = document.getElementById("search").value.toLowerCase();
+  let items = document.getElementById("linkList").getElementsByTagName("li");
+
+  for (let i = 0; i < items.length; i++) {
+    let text = items[i].innerText.toLowerCase();
+    items[i].style.display = text.includes(input) ? "" : "none";
+  }
+}
+</script>
+
+</body>
+</html>
 <!DOCTYPE html>
 <html>
 <head>
