@@ -1,5 +1,82 @@
 <!DOCTYPE html><!DOCTYPE html><!DOCTYPE html>
+<html><!DOCTYPE html>
 <html>
+<head>
+  <title>My Website Chat</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f2f2f2;
+    }
+    .chat-box {
+      width: 90%;
+      max-width: 400px;
+      margin: 50px auto;
+      background: white;
+      border-radius: 10px;
+      padding: 10px;
+    }
+    .messages {
+      height: 300px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    .user {
+      color: blue;
+      margin: 5px 0;
+    }
+    .bot {
+      color: green;
+      margin: 5px 0;
+    }
+    input {
+      width: 75%;
+      padding: 8px;
+    }
+    button {
+      padding: 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="chat-box">
+  <h3>🤖 My Chat Box</h3>
+
+  <div class="messages" id="chat"></div>
+
+  <input type="text" id="userInput" placeholder="Type message...">
+  <button onclick="send()">Send</button>
+</div>
+
+<script>
+  function send() {
+    let input = document.getElementById("userInput");
+    let msg = input.value;
+    if (msg === "") return;
+
+    let chat = document.getElementById("chat");
+
+    chat.innerHTML += "<div class='user'>You: " + msg + "</div>";
+
+    let reply = "Main aapki website ka helper hoon 🙂";
+
+    if (msg.includes("hello")) reply = "Hello! Kaise madad kar sakta hoon?";
+    if (msg.includes("link")) reply = "Aapko kaunsi link chahiye?";
+    if (msg.includes("help")) reply = "Main help ke liye yahin hoon";
+
+    chat.innerHTML += "<div class='bot'>Bot: " + reply + "</div>";
+
+    input.value = "";
+    chat.scrollTop = chat.scrollHeight;
+  }
+</script>
+
+</body>
+</html>
 <head>
   <title>My Links Website</title>
   <style>
