@@ -1,6 +1,57 @@
 <!DOCTYPE html><!DOCTYPE html><!DOCTYPE html>
 <html><!DOCTYPE html><!DOCTYPE html>
+<html><!DOCTYPE html>
 <html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manthan Links</title>
+
+<style>
+body {
+  font-family: Arial;
+  background: #f2f2f2;
+  padding: 10px;
+}
+h2 { text-align:center; }
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+a {
+  display:block;
+  background:white;
+  padding:12px;
+  margin:5px 0;
+  text-decoration:none;
+  color:black;
+  border-radius:6px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Manthan – All Important Links</h2>
+
+<input type="text" id="search" placeholder="Search link..." onkeyup="searchLinks()">
+
+<div id="links">
+  <a href="https://www.google.com">Google Website</a>
+  <a href="https://www.youtube.com">YouTube</a>
+  <a href="https://www.instagram.com">Instagram</a>
+  <a href="https://www.facebook.com">Facebook</a>
+  <a href="https://www.chat.openai.com">ChatGPT</a>
+  <!-- Yahan aur links add karte jao -->
+</div>
+
+<script>
+function searchLinks() {
+  let input = document.getElementById("search").value.toLowerCase();
+  let links = document.getElementById("links").getElementsByTagName("a");
+  for (let i = 0; i < links.length; i++) {
+    links[i].style.display =
+      links[i
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Manthan Links</title>
