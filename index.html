@@ -1,5 +1,82 @@
 <!DOCTYPE html><!DOCTYPE html><!DOCTYPE html>
-<html><!DOCTYPE html>
+<html><!DOCTYPE html><!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manthan Links</title>
+
+<style>
+body {
+  font-family: Arial;
+  background: #f2f2f2;
+  margin: 0;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+a {
+  display: block;
+  padding: 12px;
+  margin: 5px 0;
+  background: white;
+  text-decoration: none;
+  color: black;
+  border-radius: 8px;
+}
+
+#chat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #007bff;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  text-align: center;
+  line-height: 60px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Manthan 🔗 Links</h1>
+
+<input type="text" id="search" placeholder="Search link..." onkeyup="searchLinks()">
+
+<a href="https://licindia.in">LIC</a>
+<a href="https://www.google.com">Google</a>
+<a href="https://www.youtube.com">YouTube</a>
+<a href="https://chat.openai.com">ChatGPT</a>
+
+<div id="chat">🎤</div>
+
+<script>
+function searchLinks() {
+  let input = document.getElementById("search").value.toLowerCase();
+  let links = document.getElementsByTagName("a");
+
+  for (let i = 0; i < links.length; i++) {
+    let text = links[i].innerText.toLowerCase();
+    links[i].style.display = text.includes(input) ? "" : "none";
+  }
+}
+</script>
+
+</body>
+</html>
 <html><div style="border:1px solid #000;padding:10px;">
   <p><b>Bot:</b> Hello! Main aapki madad kar sakta hoon.</p>
   <input placeholder="Yahan likho..." style="width:90%;">
