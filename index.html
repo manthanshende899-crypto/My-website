@@ -3,7 +3,78 @@
 </a>
 
 <style>
-.chatgpt-btn{
+.chatgpt-btn{<!DOCTYPE html>
+<html>
+<head>
+  <title>My Website</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    input {
+      width: 80%;
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background: #222;
+      margin: 10px;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    a {
+      color: cyan;
+      text-decoration: none;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My Website Links</h1>
+
+  <input type="text" id="search" placeholder="Search name..." onkeyup="searchLinks()">
+
+  <ul id="linkList">
+    <li><a href="https://google.com">Google</a></li>
+    <li><a href="https://youtube.com">YouTube</a></li>
+    <li><a href="https://instagram.com">Instagram</a></li>
+    <li><a href="https://github.com">GitHub</a></li>
+  </ul>
+
+  <script>
+    function searchLinks() {
+      let input = document.getElementById('search').value.toLowerCase();
+      let items = document.querySelectorAll('#linkList li');
+
+      items.forEach(item => {
+        let text = item.innerText.toLowerCase();
+        if (text.includes(input)) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
   padding: 10px 20px;
   background-color: #10a37f;
   color: white;
